@@ -20,9 +20,6 @@ cron "0 7 * * *" script-path=jd_speed_sign.js,tag=京东极速版
 京东极速版 = type=cron,script-path=jd_speed_sign.js, cronexpr="0 7 * * *", timeout=33600, enable=true
 */
 
-
-
-
 const $ = new Env('京东极速版');
 
 const notify = $.isNode() ? require('./sendNotify') : '';
