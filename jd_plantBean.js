@@ -10,19 +10,16 @@
 =====================================Quantumult X=================================
 [task_local]
 1 7-21/2 * * * jd_plantBean.js, tag=种豆得豆, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzd.png, enabled=true
-
 =====================================Loon================================
 [Script]
 cron "1 7-21/2 * * *" script-path=jd_plantBean.js,tag=京东种豆得豆
-
 ======================================Surge==========================
 京东种豆得豆 = type=cron,cronexp="1 7-21/2 * * *",wake-system=1,timeout=3600,script-path=jd_plantBean.js
-
 ====================================小火箭=============================
 京东种豆得豆 = type=cron,script-path=jd_plantBean.js, cronexpr="1 7-21/2 * * *", timeout=3600, enable=true
-
 搬的https://github.com/uniqueque/QuantumultX/blob/4c1572d93d4d4f883f483f907120a75d925a693e/Script/jd_plantBean.js
 */
+
 const $ = new Env('京东种豆得豆');
 //Node.js用户请在jdCookie.js处填写京东ck;
 //ios等软件用户直接用NobyDa的jd cookie
@@ -35,9 +32,9 @@ const JD_API_HOST = 'https://api.m.jd.com/client.action';
 //下面给出两个账号的填写示例（iOS只支持2个京东账号）
 let shareCodes = [ // IOS本地脚本用户这个列表填入你要助力的好友的shareCode
                    //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
-  '66j4yt3ebl5ierjljoszp7e4izzbzaqhi5k2unz2afwlyqsgnasq@olmijoxgmjutyrsovl2xalt2tbtfmg6sqldcb3q@e7lhibzb3zek27amgsvywffxx7hxgtzstrk2lba@e7lhibzb3zek32e72n4xesxmgc2m76eju62zk3y@l4ex6vx6yynovp6l5zmgzx4nssii54ewecu36gi@l4ex6vx6yynovp6l5zmgzx4nssii54ewecu36gi',
+  'sol6fm2oix2tdul5qltvasgi4q@sol6fm2oix2tdzyteuw23genza@pcdiakg4uk2exregpivu5v3xb4',
   //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'olmijoxgmjutyx55upqaqxrblt7f3h26dgj2riy@mlrdw3aw26j3wgzjipsxgonaoyr2evrdsifsziyvnsb2r54jq34s64sc4it3jlfnejwmtmsuadax2i@eeexxudqtlampbpvmceutaaht5tcftvr6kohuny@e7lhibzb3zek27gfeceqb6wwm45gshcaroxg5ka@e7lhibzb3zek3xxnrskw4mpzstihpk3f7fqziiy@olmijoxgmjutzhazczrfgf75qrbqseqdmb5ey5a',
+  'sol6fm2oix2tdul5qltvasgi4q@sol6fm2oix2tdzyteuw23genza@pcdiakg4uk2exregpivu5v3xb4','sol6fm2oix2tdul5qltvasgi4q@sol6fm2oix2tdzyteuw23genza@pcdiakg4uk2exregpivu5v3xb4',
 ]
 let allMessage = ``;
 let currentRoundId = null;//本期活动id
